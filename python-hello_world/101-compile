@@ -1,18 +1,3 @@
-#!/usr/bin/python3
+#!/bin/bash
 
-import os
-
-# Reading the source code
-source_code_file_name = os.environ["PYFILE"]
-source_code_file = open(source_code_file_name, "r")
-source_code = source_code_file.read()
-source_code_file.close()
-
-# Compiling the source code
-machine_code = compile(source_code, source_code_file_name, "exec")
-
-# Writing the source code
-machine_code_file_name = os.environ["PYFILEC"]
-machine_code_file = open(machine_code_file_name, "w")
-machine_code_file.write(machine_code)
-machine_code_file.close()
+python3 -c "import os; source_code_file_name = os.environ[\"PYFILE\"]; source_code_file = open(source_code_file_name, \"r\"); source_code = source_code_file.read(); source_code_file.close(); machine_code = compile(source_code, source_code_file_name, \"exec\"); machine_code_file_name = os.environ[\"PYFILEC\"]; machine_code_file = open(machine_code_file_name, \"w\"); machine_code_file.write(machine_code); machine_code_file.close()"
