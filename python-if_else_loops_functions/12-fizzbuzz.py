@@ -13,6 +13,6 @@ def fizzbuzz():
             output += "Buzz"
 
         if output == "":
-            output += i
+            output += str(i)
 
         print(output, end=" ")
