@@ -7,4 +7,4 @@ for i in range(122, 96, -1):
         print(f"{chr(i - 32)}", end="")
 
     if i == 97:
-        print("")
+        print("\n", end="")
