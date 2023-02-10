@@ -1,7 +1,7 @@
 #!/usr/bin/python3
-# comment maybe?
+# 3-print_alphabt.py
 
-for i in range(97, 123):
-    # Checking for e and q
-    if not (i == 101 or i == 113):
-        print("{:s}".format(chr(i)), end="")
+"""print the alphabet in lowercase, not followed by a new line."""
+for letter in range(97, 123):
+    if chr(letter) != 'e' and chr(letter) != 'q':
+        print("{:s}".format(chr(letter)), end="")
