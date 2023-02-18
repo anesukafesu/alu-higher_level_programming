@@ -9,7 +9,7 @@ def main():
     # Can't think of a more elegant way to do it
     display(a, b, add(a, b), '+')
     display(a, b, sub(a, b), '-')
-    display(a, b, mul(a, b), '*'))
+    display(a, b, mul(a, b), '*')
     display(a, b, div(a, b), '/')
 
 def display(a, b, c, sign):
