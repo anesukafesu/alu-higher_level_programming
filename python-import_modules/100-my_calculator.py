@@ -25,8 +25,9 @@ def main():
         print('Unknown operator. Available operators: +, -, * and /')
         exit(1)
 
-    print("{} {} {} = {}".format(a, op, bb, c)
+    print("{} {} {} = {}".format(a, op, b, c))
 
 
-if __name__ == "__main__":
+if __name__ = '__main__':
     main()
+
