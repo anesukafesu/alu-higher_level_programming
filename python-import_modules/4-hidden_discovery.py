@@ -5,7 +5,7 @@ import hidden_4
 
 def main():
     members = getmembers(hidden_4, isfunction)
-    
+
     for member in members:
         name = member[0]
 
