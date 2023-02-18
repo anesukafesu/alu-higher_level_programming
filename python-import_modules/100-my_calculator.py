@@ -1,16 +1,16 @@
 #!/usr/bin/python3
 from calculator_1 import add, sub, mul, div
-import sys
+from sys import argv, exit
 
 
 def main():
-    if len(sys.argv) != 4:
-        print("Usage: {} <a> <operator> <b>".format(sys.argv[0]))
-        sys.exit(1)
+    if len(argv) != 4:
+        print("Usage: {} <a> <operator> <b>".format(argv[0]))
+        exit(1)
 
-    a = int(sys.argv[1])
-    b = int(sys.argv[3])
-    op = sys.argv[2]
+    a = int(argv[1])
+    b = int(argv[3])
+    op = argv[2]
     c = 0
 
     if op == '+':
@@ -23,7 +23,7 @@ def main():
         c = div(a, b)
     else:
         print('Unknown operator. Available operators: +, -, * and /')
-        sys.exit(1)
+        exit(1)
 
     print("{} {} {} = {}".format(a, op, bb, c)
     
