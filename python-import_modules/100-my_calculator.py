@@ -26,7 +26,7 @@ def main():
         exit(1)
 
     print("{} {} {} = {}".format(a, op, bb, c)
-    
-    
+
+
 if __name__ == "__main__":
     main()
