@@ -16,5 +16,5 @@ def display(a, b, c, sign):
     print("{} {} {} = {}".format(a, sign, b, c))
 
 
-if __name__ = "__main__":
+if __name__ == "__main__":
     main()
