@@ -12,6 +12,7 @@ def main():
     display(a, b, mul(a, b), '*')
     display(a, b, div(a, b), '/')
 
+
 def display(a, b, c, sign):
     print("{} {} {} = {}".format(a, sign, b, c))
 
