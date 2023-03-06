@@ -2,7 +2,6 @@
 
 
 def no_c(my_string):
- 
     output = ""
 
     for char in my_string:
