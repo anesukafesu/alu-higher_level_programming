@@ -6,7 +6,7 @@ def no_c(my_string):
     output = ""
 
     for char in my_string:
-        if char is not 'c' and char is not 'C':
+        if char != 'c' and char != 'C':
             output += char
 
 
