@@ -9,6 +9,10 @@ def max_integer(my_list=[]):
     # This includes the sys module
     max_int = -9223372036854775808
 
+    # Case when list is empty and we just return None
+    if len(my_list) == 0:
+        return None
+
     for num in my_list:
         if num > max_int:
             max_int = num
