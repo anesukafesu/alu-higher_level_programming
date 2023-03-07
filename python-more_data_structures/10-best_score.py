@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 
 
-def best_score(a_dictionary):
+def best_score(a_dictionary={}):
     max_score = -9223372036854775806
     max_key = ""
 
