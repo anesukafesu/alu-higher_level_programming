@@ -33,6 +33,6 @@ def roman_to_int(roman_string):
         else:
             total += curr_val
 
-    print(total)
+    return total
 
 roman_to_int('XXVIII')
