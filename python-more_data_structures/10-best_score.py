@@ -1,7 +1,10 @@
 #!/usr/bin/python3
 
 
-def best_score(a_dictionary={}):
+def best_score(a_dictionary):
+    if a_dictionary is None:
+        return None
+
     max_score = -9223372036854775806
     max_key = ""
 
