@@ -3,10 +3,11 @@
 
 def best_score(a_dictionary):
     max_score = -9223372036854775806
+    max_key = ""
 
     for key in a_dictionary:
         if a_dictionary[key] > max_score:
             max_score = a_dictionary[key]
-            return key
+            max_key = key
 
-    return None
+    return max_key if max_key != "" else None
