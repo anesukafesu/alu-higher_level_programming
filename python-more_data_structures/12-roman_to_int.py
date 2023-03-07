@@ -3,7 +3,7 @@
 
 def roman_to_int(roman_string):
     # Getting rid of empty strings and invalid data types
-    if type(roman_string) == 'str' or str == '':
+    if not isinstance(roman_string, str) or roman_string == '':
         return 0
     
     # From this point, we can assume the string has at least one char
