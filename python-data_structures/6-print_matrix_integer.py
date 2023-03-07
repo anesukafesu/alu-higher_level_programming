@@ -6,7 +6,7 @@ def print_integer_matrix(matrix=[]):
         row_output = ""
 
         for i in range(len(row)):
-            row_output += "{}".format(row[i])
+            row_output += "{:d}".format(row[i])
 
             if i != len(row) - 1:
                 row_output += " "
