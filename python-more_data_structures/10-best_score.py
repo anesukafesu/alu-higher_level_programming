@@ -6,6 +6,6 @@ def best_score(a_dictionary):
 
     for key in a_dictionary:
         if a_dictionary[key] > max_score:
-            return person
+            return key
 
     return None
