@@ -2,7 +2,6 @@
 
 
 def add_tuple(tuple_a=(), tuple_b=()):
-    
     # Clean up tuple a to prevent possible errors
     if len(tuple_a) == 0:
         tuple_a = (0, 0)
