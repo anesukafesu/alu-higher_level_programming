@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 
 
-def weight_average(my_list[]):
+def weight_average(my_list=[]):
     item_count = 0
     total = 0
 
