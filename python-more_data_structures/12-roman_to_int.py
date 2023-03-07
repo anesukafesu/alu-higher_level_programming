@@ -5,7 +5,7 @@ def roman_to_int(roman_string):
     # Getting rid of empty strings and invalid data types
     if not isinstance(roman_string, str) or roman_string == '':
         return 0
-    
+
     # From this point, we can assume the string has at least one char
     mappings = {
         'I': 1,
@@ -22,7 +22,7 @@ def roman_to_int(roman_string):
 
     for i in range(last_index + 1):
         curr_val = mappings[roman_string[i]]
-        
+
         if i < last_index:
             next_val = mappings[roman_string[i + 1]]
 
