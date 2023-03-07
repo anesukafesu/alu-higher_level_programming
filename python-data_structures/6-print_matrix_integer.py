@@ -12,5 +12,3 @@ def print_matrix_integer(matrix=[]):
                 row_output += " "
 
         print(row_output)
-
-print_integer_matrix()
