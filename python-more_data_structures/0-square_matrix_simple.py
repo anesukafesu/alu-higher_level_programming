@@ -5,4 +5,4 @@ def square_array(array):
 
 
 def square_matrix_simple(matrix=[]):
-    return map(square_array, matrix):
+    return map(square_array, matrix)
