@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 
 
-def print_integer_matrix(matrix=[]):
+def print_matrix_integer(matrix=[]):
     for row in matrix:
         row_output = ""
 
