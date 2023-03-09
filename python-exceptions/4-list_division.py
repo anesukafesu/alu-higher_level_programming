@@ -4,11 +4,8 @@
 def list_division(list_1, list_2, list_length):
     new_list = []
 
-    # For some reason result was being converted to a float data type
-    # This caused errors with the testers
-    result = int(0)
-
     for i in range(list_length):
+        result = 0
         try:
             result = list_1[i] / list_2[i]
         except ZeroDivisionError:
