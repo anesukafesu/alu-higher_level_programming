@@ -3,7 +3,10 @@
 
 def list_division(list_1, list_2, list_length):
     new_list = []
-    result = 0
+
+    # For some reason result was being converted to a float data type
+    # This caused errors with the testers
+    result = int(0)
 
     for i in range(list_length):
         try:
@@ -15,7 +18,6 @@ def list_division(list_1, list_2, list_length):
         except IndexError:
             print('out of range')
         finally:
-            print(result)
             new_list.append(result)
 
     return new_list
