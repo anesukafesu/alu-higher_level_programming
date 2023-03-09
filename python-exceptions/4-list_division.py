@@ -3,6 +3,7 @@
 
 def list_division(list_1, list_2, list_length):
     new_list = []
+    result = 0
 
     for i in range(list_length):
         try:
