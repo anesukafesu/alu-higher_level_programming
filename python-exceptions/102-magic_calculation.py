@@ -1,5 +1,6 @@
 #!/usr/bin/python
 
+
 def magic_calculation(a, b):
     result = 0
 
@@ -13,5 +14,4 @@ def magic_calculation(a, b):
             result = a + b
             break
 
-        
     return result
