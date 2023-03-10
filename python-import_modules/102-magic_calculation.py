@@ -6,7 +6,7 @@ def magic_calculation(a, b):
     add = _temp.add
     sub = _temp.sub
 
-    if a > b:
+    if b > a:
         c = add(a, b)
 
         for i in range(4, 6):
