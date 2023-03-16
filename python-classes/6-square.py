@@ -24,11 +24,29 @@ class Square:
     def __add_position(self, position):
         """
         Private method to validate the position
+        Not the most elegant code I have written but hey it works
         """
-        if isinstance(position, tuple) and len(position) == 2 and position[0] > 0 and position[1] > 0:
-            self.__position = position
+        error_text = "position must be a tuple of 2 positive integers"
+        # Check if it is a tuple
+        if isinstance(position, tuple):
+
+            # Check if it is of length 2
+            if len(position) == 2:
+
+                # Check if the values are both ints
+                if isinstance(position[0], int) and isinstance(postion[1], int):
+                    # Check if values are both > 0
+                    if position[0] > 0 and position[1] > 0:
+
+                        self.__position = position
+                    else:
+                        raise TypeError(error_text)
+                else:
+                    raise TypeError(error_text)
+            else:
+                raise TypeError(error_text)
         else:
-            raise TypeError("position must be a tuple of 2 positive integers")
+            raise TypeError(error_text)
 
     @position.setter
     def position(self, position):
