@@ -1,4 +1,4 @@
-#!/usr/bin
+#!/usr/bin/python3
 """
 This module also demonstrates creating Python classes
 Using the constructor method and validating arguments
