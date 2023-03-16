@@ -15,18 +15,24 @@ class Square:
         does not matter
         """
         self.__size = size
-        self.__position = position
+        self__add_position(position)
 
     @property
     def position(self):
         return self.__position
 
-    @position.setter
-    def position(self, position):
+    def __add_position(self, position):
+        """
+        Private method to validate the position
+        """
         if isinstance(position, tuple) and len(position) == 2 and position[0] > 0 and position[1] > 0:
             self.__position = position
         else:
             raise TypeError("position must be a tuple of 2 positive integers")
+
+    @position.setter
+    def position(self, position):
+        self.__add_position(position)
 
     @property
     def size(self):
