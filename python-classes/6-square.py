@@ -34,7 +34,7 @@ class Square:
             if len(position) == 2:
 
                 # Check if the values are both ints
-                if isinstance(position[0], int) and isinstance(postion[1], int):
+                if isinstance(position[0], int) and isinstance(position[1], int):
                     # Check if values are both > 0
                     if position[0] > 0 and position[1] > 0:
 
