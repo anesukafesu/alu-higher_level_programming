@@ -6,6 +6,7 @@ This module demonstrates how to create classes
 that can be initialised and store private fields
 """
 
+
 class Square:
     """
     This class takes creates a square
