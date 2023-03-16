@@ -1,7 +1,8 @@
 #!/usr/bin/python3
 
+
 """
-This module demonstrates how to create classes 
+This module demonstrates how to create classes
 that can be initialised and store private fields
 """
 
