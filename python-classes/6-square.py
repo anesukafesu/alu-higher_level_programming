@@ -32,7 +32,7 @@ class Square:
 
             # Check if it is of length 2
             if len(position) == 2:
-                
+ 
                 # Check if both values are ints
                 first_is_int = isinstance(position[0], int)
                 second_is_int = isinstance(position[1], int)
