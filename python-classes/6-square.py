@@ -15,7 +15,7 @@ class Square:
         does not matter
         """
         self.__size = size
-        self__add_position(position)
+        self.__add_position(position)
 
     @property
     def position(self):
