@@ -12,7 +12,7 @@ class Square:
     """
     This patented square class
     """
-    def __init__(self, size=0): 
+    def __init__(self, size=0):
         """
         Takes in size and ensures it is the right
         data type and is in the right range
