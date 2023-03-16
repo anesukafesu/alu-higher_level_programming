@@ -17,13 +17,14 @@ class Square:
         self.__size = size
 
 
+    @property
     def size(self):
         """
         Square v2 now can retrieve properties
         """
         return self.__size
 
-
+    @size.setter
     def size(self, value):
         """
         And you can set them too using 
