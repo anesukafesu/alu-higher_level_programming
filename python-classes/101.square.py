@@ -15,14 +15,17 @@ class Square:
         does not matter
         """
         self.__size = size
-        self.position(position)
+        self.set_position(position)
 
     @property
     def position(self):
         return self.__position
-    
+
     @position.setter
     def position(self, position):
+        self.set_position(position)
+
+    def set_position(self, position):
         """
         Private method to validate the position
         Not the most elegant code I have written but hey it works
@@ -39,11 +42,14 @@ class Square:
 
                 if first_is_int and second_is_int:
 
-                    # Check if values are both > 0
+                    # Check if values are both >= 0
                     if position[0] >= 0 and position[1] >= 0:
+
                         self.__position = position
                         return
 
+        # One of the checks failed and so did not return
+        # Hence we raise a type error
         raise TypeError(error_text)
 
     @property
@@ -70,15 +76,11 @@ class Square:
     def area(self):
         return self.__size ** 2
 
-    def __repr__(self):
-        output = ""
-        if self.__size == 0:
-            return output
-        else:
-            output += "\n" * self.__position[1]
-            for i in range(self.__size):
-                output += f'{" " * self.__position[0] + "#" * self.__size}'
-            return output
-
     def my_print(self):
-        print(self)
+        if self.__size == 0:
+            print("")
+        else:
+            for i in range(self.position[1]):
+                print("")
+            for i in range(self.__size):
+                print(" " * self.__position[0] + "#" * self.__size)
