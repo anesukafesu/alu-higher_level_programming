@@ -52,7 +52,7 @@ class Square:
     def __le__(self, s):
         return self.size <= s.size
 
-    def __gt__(self, s):
+    def __ge__(self, s):
         return self.size >= s.size
 
     def __ne__(self, s):
