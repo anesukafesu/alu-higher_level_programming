@@ -19,8 +19,10 @@ class Node:
         Returns:
             Node: The newly created node as it is a constructor
         """
-        self.data(data)
-        self.next_node(next_node)
+        self.__set_data(data)
+
+        # Initially the node can be none
+        self.__next_node = next_node
     
     @property
     def data(self):
@@ -38,6 +40,9 @@ class Node:
 
     @data.setter
     def data(self, value):
+        self.__set_data(value)
+
+    def __set_data(self, value):
         if not isinstance(value, int):
             raise TypeError('data must be an integer')
 
@@ -45,11 +50,15 @@ class Node:
 
     @next_node.setter
     def next_node(self, value):
+        self.__set_next_node(value)
+
+    def __set_next_node(self, value):
         if not isinstance(value, Node):
             raise TypeError('next_node must be a Node object')
+        self.__next_node = value
 
     def __repr__(self):
-        return self.data()
+        return f'{self.data}'
 
 
 class SinglyLinkedList:
@@ -70,11 +79,9 @@ class SinglyLinkedList:
         else:
             # We maintain a pointer to the previous node for adding
             prev = self.__head
-
             curr = self.__head.next_node
-
             while True:
-                if curr == None:
+                if curr == None: 
                     prev.next_node = Node(value)
                     break
                 else:
@@ -90,5 +97,5 @@ class SinglyLinkedList:
                 break
             else:
                 output += f'{node}\n'
-                node = node.next
-
+                node = node.next_node
+        return output.rstrip()
