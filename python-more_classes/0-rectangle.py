@@ -4,4 +4,5 @@
 """This module implements a Rectangle
 """
 class Rectangle:
+    """Rectangle class"""
     pass
