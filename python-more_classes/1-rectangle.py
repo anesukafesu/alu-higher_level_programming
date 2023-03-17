@@ -25,19 +25,17 @@ class Rectangle:
             self.__height = value
 
     @property
-    """ The width of the rectangle (int)
-    """
     def width(self):
         return self.__width
 
     @width.setter
     def width(self, value):
+        """The width of the rectangle"""
         self.__set_dimension('width', value)
 
     @property
-    """ The height of the rectangle (int)
-    """
     def height(self):
+        """The height of the rectangle"""
         return self.__height
 
     @height.setter
