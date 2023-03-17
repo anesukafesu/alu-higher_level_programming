@@ -72,12 +72,12 @@ class Square:
 
     def __repr__(self):
         output = ""
-        if self.__size == 0:
+        if self.size == 0:
             return output
         else:
-            output += "\n" * self.__position[1]
-            for i in range(self.__size):
-                output += f'{" " * self.__position[0] + "#" * self.__size}'
+            output += "\n" * self.position[1]
+            for i in range(self.size):
+                output += f'{" " * self.position[0] + "#" * self.size}'
             return output
 
     def my_print(self):
