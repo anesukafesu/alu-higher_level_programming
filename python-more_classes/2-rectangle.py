@@ -61,10 +61,10 @@ class Rectangle:
 
     def perimeter(self):
         """The perimeter"""
-		if self.__width == 0 or self.__height == 0:
-			return 0
-		else:
-        	return (self.__width + self.__height) * 2
+        if self.__width == 0 or self.__height == 0:
+            return 0
+        else:
+            return (self.__width + self.__height) * 2
 
     def __init__(self, width=0, height=0):
         self.__set_dimension('width', width)
