@@ -81,4 +81,4 @@ class Rectangle:
     def __init__(self, width=0, height=0):
         self.__set_dimension('width', width)
         self.__set_dimension('height', height)
-        self.__class__.number_of_instance += 1
+        self.__class__.number_of_instances += 1
