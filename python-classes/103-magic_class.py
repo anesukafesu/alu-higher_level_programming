@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/python3
 """
 Implements a circle
 I am doing this exercise at 2 3.14hrs
