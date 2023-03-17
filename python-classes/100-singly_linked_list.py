@@ -1,6 +1,11 @@
 #!/usr/bin/python3
 """
-This module defines a Node and SinglyLinkedList class of a linked list
+This module defines the classes needed for a LinkedList
+It contains the class Node
+which stores a value and a reference to the next node
+It also stores the class SinglyLinkedList
+which is used for list-wide operations
+such as inserting new nodes and getting all nodes
 """
 
 class Node:
