@@ -20,7 +20,7 @@ class Square:
     @property
     def position(self):
         return self.__position
-    
+
     @position.setter
     def position(self, position):
         self.set_position(position)
@@ -51,7 +51,6 @@ class Square:
         # One of the checks failed and so did not return
         # Hence we raise a type error
         raise TypeError(error_text)
-
 
     @property
     def size(self):
