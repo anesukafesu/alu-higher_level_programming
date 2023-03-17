@@ -68,25 +68,36 @@ class SinglyLinkedList:
         self.__head = None
 
     def sorted_insert(self, value):
-        """Inserts a value to the end of the list
+        """Inserts a value in a sorted manner into the list
         Args:
             value (int) The value to be inserted
         Returns:
             None
         """
+        new_node = Node(value)
+        
+        # If the list is empty
         if self.__head == None:
-            self.__head = Node(value)
+            self.__head = new_node
+        elif self.__head.data > new_node.data:
+            if self.__head.next_node != None:
+                new_node.next_node = self.__head.next_node
+            
+            new_node.next_node = self.__head
+            self.__head = new_node
         else:
-            # We maintain a pointer to the previous node for adding
             prev = self.__head
             curr = self.__head.next_node
-            while True:
-                if curr == None: 
-                    prev.next_node = Node(value)
-                    break
-                else:
-                    prev = curr
-                    curr = curr.next_node
+            # This will stop when we 
+            # a. Encounter a value bigger than the value we want to add
+            # b. We run out of nodes
+            while curr != None and curr.data < new_node.data:
+                prev = curr
+                curr = curr.next_node
+            
+            new_node.next_node = curr
+            prev.next_node = new_node
+
 
     def __repr__(self):
         output = ""
