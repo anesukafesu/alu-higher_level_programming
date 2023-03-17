@@ -67,7 +67,7 @@ class Rectangle:
             return (self.__width + self.__height) * 2
     
     def __repr__(self):
-        return ("#" * self.__width + "\n") * self.__height
+        return ("#" * self.__width + "\n") * self.__height).rstrip()
 
     def __str__(self):
         return self.__repr__()
