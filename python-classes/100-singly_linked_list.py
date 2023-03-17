@@ -1,5 +1,4 @@
 #!/usr/bin/python3
-
 """
 This module defines a Node and SinglyLinkedList class of a linked list
 """
