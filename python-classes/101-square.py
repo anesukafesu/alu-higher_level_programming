@@ -15,13 +15,14 @@ class Square:
         does not matter
         """
         self.__size = size
-        self.__add_position(position)
+        self.position(position)
 
     @property
     def position(self):
         return self.__position
-
-    def __add_position(self, position):
+    
+    @position.setter
+    def position(self, position):
         """
         Private method to validate the position
         Not the most elegant code I have written but hey it works
@@ -51,10 +52,6 @@ class Square:
         else:
             raise TypeError(error_text)
 
-    @position.setter
-    def position(self, position):
-        self.__add_position(position)
-
     @property
     def size(self):
         """
@@ -79,11 +76,16 @@ class Square:
     def area(self):
         return self.__size ** 2
 
-    def my_print(self):
+    def __repr__(self):
+        output = ""
         if self.__size == 0:
-            print("")
+            return output
         else:
-            for i in range(self.position[1]):
-                print("")
+            number_of_empty_rows = rows.position[1]
+            output += ("\n" * number_of_empty_rows - 1)
             for i in range(self.__size):
-                print(" " * self.__position[0] + "#" * self.__size)
+                output += " " * self.__position[0] + "#" * self.__size
+            return output
+
+    def my_print(self):
+        print(self)
