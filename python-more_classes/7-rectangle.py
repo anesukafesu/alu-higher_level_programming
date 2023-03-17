@@ -70,7 +70,8 @@ class Rectangle:
             return (self.__width + self.__height) * 2
 
     def __str__(self):
-        return ((f'{self.print_symbol}' * self.__width + "\n") * self.__height).rstrip()
+        s = self.print_symbol
+        return ((f'{s}' * self.__width + "\n") * self.__height).rstrip()
 
     def __repr__(self):
         return f'Rectangle({self.__width}, {self.__height})'
