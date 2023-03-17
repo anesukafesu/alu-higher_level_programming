@@ -77,8 +77,8 @@ class Square:
         else:
             output += "\n" * self.position[1]
             for i in range(self.size):
-                output += f'{" " * self.position[0] + "#" * self.size}'
-            return output
+                output += f'{" " * self.position[0] + "#" * self.size}\n'
+            return output.rstrip()
 
     def my_print(self):
         print(self)
