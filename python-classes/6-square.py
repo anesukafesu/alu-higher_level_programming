@@ -39,18 +39,16 @@ class Square:
 
                 if first_is_int and second_is_int:
 
-                    # Check if values are both > 0
+                    # Check if values are both >= 0
                     if position[0] >= 0 and position[1] >= 0:
 
                         self.__position = position
-                    else:
-                        raise TypeError(error_text)
-                else:
-                    raise TypeError(error_text)
-            else:
-                raise TypeError(error_text)
-        else:
-            raise TypeError(error_text)
+                        return
+
+        # One of the checks failed and so did not return
+        # Hence we raise a type error
+        raise TypeError(error_text)
+
 
     @property
     def size(self):
