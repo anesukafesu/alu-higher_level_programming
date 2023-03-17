@@ -17,7 +17,7 @@ class Rectangle:
         area() Returns the area of the rectangle
         perimeter() Returns the perimeter of the rectangle
     """
-    number_of_instances=0
+    number_of_instances = 0
 
     def __set_dimension(self, dimension, value):
         """
