@@ -15,7 +15,7 @@ class Square:
         does not matter
         """
         self.__size = size
-        self.position(position)
+        self.set_position(position)
 
     @property
     def position(self):
@@ -23,6 +23,9 @@ class Square:
     
     @position.setter
     def position(self, position):
+        self.set_position(position)
+
+    def set_position(self, position):
         """
         Private method to validate the position
         Not the most elegant code I have written but hey it works
