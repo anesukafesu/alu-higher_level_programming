@@ -65,7 +65,7 @@ class SinglyLinkedList:
         Returns:
             None
         """
-        if self.__head = None:
+        if self.__head == None:
             self.__head = Node(value)
         else:
             # We maintain a pointer to the previous node for adding
