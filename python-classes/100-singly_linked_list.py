@@ -1,30 +1,39 @@
 #!/usr/bin/python3
-"""
-This module defines the classes needed for a LinkedList
-It contains the class Node
-which stores a value and a reference to the next node
-It also stores the class SinglyLinkedList
-which is used for list-wide operations
-such as inserting new nodes and getting all nodes
+"""This module defines the classes needed for a LinkedList
+
+Example:
+    my_list = SinglyLinkedList()
+    my_list.sorted_insert(5)
+    my_list.sorted_insert(4)
+    print(my_list)
 """
 
 class Node:
-    """
-    class Node
-    stores value as data
-    stores a reference to the next node in next_node
-    if it is the terminal node then next_node will be none
+    """Implements a single node in a linked list
     """
     def __init__(self, data, next_node=None):
+        """Implements Node
+        Args:
+            data (int): The value to be stored at that node
+            next_node (Node): A pointer to the next node
+        Returns:
+            Node: The newly created node as it is a constructor
+        """
         self.data(data)
         self.next_node(next_node)
     
     @property
     def data(self):
+        """int: Returns the data stored by this node
+        Returns:
+            data (int): The value stored at this node
+        """
         return self.__data
 
     @property
     def next_node(self):
+        """Node: Returns the next_node in the list or None if there is no next_node and this node is the last in the list
+        """
         return self.__next_node
 
     @data.setter
@@ -44,10 +53,7 @@ class Node:
 
 
 class SinglyLinkedList:
-    """
-    implements a linked list
-    allows simple operations like inserting items
-    and printing out values into the terminal
+    """Implements a singly-linked list
     """
     def __init__(self):
         self.__head = None
