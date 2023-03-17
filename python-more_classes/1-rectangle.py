@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""This module implements a Rectangle"""
+"""This module gives us a Rectangle"""
 
 
 class Rectangle:
