@@ -7,7 +7,18 @@ Classes:
 
 
 class Rectangle:
-    """Rectangle class"""
+    """A class to represent a person
+    
+    Attributes:
+        height (int) The height of the rectangle
+        width (int) The width of the rectangle
+
+    Methods:
+        height(value) Sets the height of the rectangle
+        width(value) Sets the width of the rectangle
+        area() Returns the area of the rectangle
+        perimeter() Returns the perimeter of the rectangle
+    """
     def __set_dimension(self, dimension, value):
         """
         Private instance method to set either the height or width
