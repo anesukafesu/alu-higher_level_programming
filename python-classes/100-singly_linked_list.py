@@ -8,6 +8,7 @@ Example:
     print(my_list)
 """
 
+
 class Node:
     """Implements a single node in a linked list
     """
@@ -23,7 +24,7 @@ class Node:
 
         # Initially the node can be none
         self.__next_node = next_node
-    
+
     @property
     def data(self):
         """int: Returns the data stored by this node
@@ -34,7 +35,9 @@ class Node:
 
     @property
     def next_node(self):
-        """Node: Returns the next_node in the list or None if there is no next_node and this node is the last in the list
+        """Node: Returns the next_node in the list
+        or None if there is no next_node and this node
+        is the last in the list
         """
         return self.__next_node
 
@@ -75,37 +78,36 @@ class SinglyLinkedList:
             None
         """
         new_node = Node(value)
-        
+
         # If the list is empty
-        if self.__head == None:
+        if self.__head is None:
             self.__head = new_node
         elif self.__head.data > new_node.data:
-            if self.__head.next_node != None:
+            if self.__head.next_node is not None:
                 new_node.next_node = self.__head.next_node
-            
+
             new_node.next_node = self.__head
             self.__head = new_node
         else:
             prev = self.__head
             curr = self.__head.next_node
-            # This will stop when we 
+            # This will stop when we
             # a. Encounter a value bigger than the value we want to add
             # b. We run out of nodes
-            while curr != None and curr.data < new_node.data:
+            while curr is not None and curr.data < new_node.data:
                 prev = curr
                 curr = curr.next_node
-            
-            if curr != None:
+
+            if curr is None:
                 new_node.next_node = curr
             prev.next_node = new_node
-
 
     def __repr__(self):
         output = ""
         node = self.__head
-        
+       
         while True:
-            if node == None:
+            if node is None:
                 break
             else:
                 output += f'{node}\n'
