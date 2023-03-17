@@ -28,7 +28,7 @@ class Rectangle:
         Returns:
             - None
         """
-        if not isinstance(dimension, int):
+        if not isinstance(value, int):
             raise TypeError('f{dimension} must be an integer')
         
         if value < 0:
