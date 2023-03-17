@@ -98,7 +98,7 @@ class SinglyLinkedList:
                 prev = curr
                 curr = curr.next_node
 
-            if curr == None:
+            if curr is not None:
                 new_node.next_node = curr
             prev.next_node = new_node
 
