@@ -66,11 +66,8 @@ class Rectangle:
         else:
             return (self.__width + self.__height) * 2
     
-    def __repr__(self):
-        return (("#" * self.__width + "\n") * self.__height).rstrip()
-
     def __str__(self):
-        return self.__repr__()
+        return (("#" * self.__width + "\n") * self.__height).rstrip()
 
     def __init__(self, width=0, height=0):
         self.__set_dimension('width', width)
