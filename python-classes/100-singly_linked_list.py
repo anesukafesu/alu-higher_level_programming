@@ -59,6 +59,12 @@ class SinglyLinkedList:
         self.__head = None
 
     def sorted_insert(self, value):
+        """Inserts a value to the end of the list
+        Args:
+            value (int) The value to be inserted
+        Returns:
+            None
+        """
         if self.__head = None:
             self.__head = Node(value)
         else:

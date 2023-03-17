@@ -15,14 +15,13 @@ class Square:
         does not matter
         """
         self.__size = size
-        self.position(position)
+        self.__add_position(position)
 
     @property
     def position(self):
         return self.__position
-    
-    @position.setter
-    def position(self, position):
+
+    def __add_position(self, position):
         """
         Private method to validate the position
         Not the most elegant code I have written but hey it works
@@ -51,6 +50,10 @@ class Square:
                 raise TypeError(error_text)
         else:
             raise TypeError(error_text)
+
+    @position.setter
+    def position(self, position):
+        self.__add_position(position)
 
     @property
     def size(self):

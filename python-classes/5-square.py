@@ -26,8 +26,7 @@ class Square:
     @size.setter
     def size(self, value):
         """
-        And you can set them too using
-        a fancy concept called polymorphism
+        And you can set them too
         """
         if not isinstance(value, int):
             raise TypeError("size must be an integer")
