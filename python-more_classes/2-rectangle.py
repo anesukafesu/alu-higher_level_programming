@@ -8,11 +8,9 @@ Classes:
 
 class Rectangle:
     """A class to represent a person
-    
     Attributes:
         height (int) The height of the rectangle
         width (int) The width of the rectangle
-
     Methods:
         height(value) Sets the height of the rectangle
         width(value) Sets the width of the rectangle
@@ -30,7 +28,7 @@ class Rectangle:
         """
         if not isinstance(value, int):
             raise TypeError('f{dimension} must be an integer')
-        
+
         if value < 0:
             raise TypeError('f{dimension} must be >= 0')
 
