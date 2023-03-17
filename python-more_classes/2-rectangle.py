@@ -45,9 +45,11 @@ class Rectangle:
         self.__set_dimension('height', value)
 
     def area(self):
+        """The area"""
         return self.__height * self.__width
 
     def perimeter(self):
+        """The perimeter"""
         return (self.__width + self.__height) * 2
 
     def __init__(self, width=0, height=0):
