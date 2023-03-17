@@ -105,7 +105,7 @@ class SinglyLinkedList:
     def __repr__(self):
         output = ""
         node = self.__head
-       
+
         while True:
             if node is None:
                 break
