@@ -9,6 +9,7 @@ Contains the following functions:
     * lookup - returns a list of all the attributes and methods of an object
 """
 
+
 def lookup(obj):
     """ Returns a list of all the attributes and methods of an object
     Args:
