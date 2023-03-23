@@ -10,8 +10,8 @@ def write_file(file_name="", text=""):
     """
     Writes the specified content to the specified file
     Args:
-        - file_name(str) - The name of the file to 
-        write to. If the file already exists, its 
+        - file_name(str) - The name of the file to
+        write to. If the file already exists, its
         contents will be overwritten. If the file
         does not exist, it will be created.
 
