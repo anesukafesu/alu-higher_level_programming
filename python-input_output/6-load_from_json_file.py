@@ -14,8 +14,7 @@ def load_from_json_file(filename):
 
     Args:
         - filename(str) - The name of the file that
-        contains the JSON
- 
+        contains the JSON 
     Returns:
         - Object - The object represented by the JSON
         in the specified file
