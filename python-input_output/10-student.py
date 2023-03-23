@@ -45,12 +45,14 @@ class Student:
         # Get instance attributes
         for key, value in self.__dict__.items():
             preliminary_result[key] = value
-        
+
         # Filter for attrs
         if attributes is None:
             result = preliminary_result
         else:
             for attribute in attributes:
-                result[attribute] = preliminary_result[attribute]
-                
+                # Adding to the result if the attribute exists
+                if attribute in preliminary_result:
+                    result[attribute] = preliminary_result[attribute]
+
         return result
