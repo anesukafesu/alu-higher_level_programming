@@ -6,6 +6,10 @@ Classes:
 """
 
 class MyInt(int):
+    """
+    MyInt class
+    Custom int class with unexpected behaviours
+    """
     def __eq__(self, other):
         return self != other
 
