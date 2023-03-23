@@ -13,7 +13,7 @@ def from_json_string(my_str):
     Args:
         - my_str (str) - The string to parse
     Returns:
-        - Object - The Python object represented 
+        - Object - The Python object represented
         by the string
     """
     return json.loads(my_str)
