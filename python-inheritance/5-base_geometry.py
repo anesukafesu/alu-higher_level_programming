@@ -7,4 +7,7 @@ Classes:
 
 
 class BaseGeometry:
+    """
+    BaseGeometry class
+    """
     pass
