@@ -13,12 +13,12 @@ class MyInt(int):
     """
     def __eq__(self, other):
         if type(other) == int:
-            other = self.__class__(int)
+            other = self.__class__(other)
 
         return self != other
 
     def __ne__(self, other):
         if type(other) == int:
-            other = self.__class__(int)
+            other = self.__class__(other)
 
         return self == other
