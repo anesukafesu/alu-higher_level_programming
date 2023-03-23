@@ -3,6 +3,7 @@
 Implements the class_to_json method
 """
 
+
 def class_to_json(obj):
     """
     Converts any object of any class to a json-serialisable object
@@ -15,7 +16,6 @@ def class_to_json(obj):
 
     # Get all class attributes
     for key, value in obj.__class__.__dict__.items():
-        
         # Filtering default class attributes and functions
         if key[:2] != "__" and not callable(value):
             result[key] = value
