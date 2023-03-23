@@ -11,7 +11,7 @@ def save_to_json_file(my_obj, filename):
     """
     Saves the specified object to the specified file.
     The object is encoded in JSON first
-    
+
     Args:
         - my_obj (Object) - The object to save
         - filename (str) - The filename to write to
