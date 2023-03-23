@@ -32,3 +32,9 @@ class Rectangle(BaseGeometry):
 
         self.__width = width
         self.__height = height
+    
+    def area():
+        return self.__width * self.__height
+
+    def __str__():
+        return f'[Reactangle] {self.__width}/{self.__height}'
