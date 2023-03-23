@@ -57,7 +57,6 @@ class Student:
 
         return result
 
-
     def reload_from_json(self, json):
         for key in json:
             setattr(self, key, json[key])
