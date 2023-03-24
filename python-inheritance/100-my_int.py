@@ -12,13 +12,7 @@ class MyInt(int):
     Custom int class with unexpected behaviours
     """
     def __eq__(self, other):
-        if type(other) == int:
-            other = self.__class__(other)
-
-        return self != other
+        return super().__ne__(other)
 
     def __ne__(self, other):
-        if type(other) == int:
-            other = self.__class__(other)
-
-        return self == other
+        return super().__eq__(other)
