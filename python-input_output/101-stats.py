@@ -32,7 +32,7 @@ def main():
     # Loops each line in stdin 
     for line in sys.stdin:
         # parse line to extract info
-        fields = sample_log.strip().split()
+        fields = line.strip().split()
         status_code = fields[-2]
         file_size = fields[-1]
 
