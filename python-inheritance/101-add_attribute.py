@@ -3,6 +3,7 @@
 Gently adds attributes
 """
 
+
 def add_attribute(obj, name, value):
     """
     Consent culture
