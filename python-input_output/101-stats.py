@@ -53,5 +53,5 @@ def main():
             summarise_and_reset()
 
 
-if __name__ = "__main__":
+if __name__ == "__main__":
     main()
