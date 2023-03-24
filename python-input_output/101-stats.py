@@ -35,25 +35,28 @@ def main():
     # Loops each line in stdin
     for line in sys.stdin:
         # parse line to extract info
-        fields = line.strip().split()
-        status_code = fields[-2]
-        file_size = int(fields[-1])
+        try:
+            fields = line.strip().split()
+            status_code = fields[-2]
+            file_size = int(fields[-1])
 
-        # Add status_code to our hash
-        if status_code in status_codes_frequency:
-            status_codes_frequency[status_code] += 1
-        else:
-            status_codes_frequency[status_code] = 1
+            # Add status_code to our hash
+            if status_code in status_codes_frequency:
+                status_codes_frequency[status_code] += 1
+            else:
+                status_codes_frequency[status_code] = 1
 
-        # increase total_file_size
-        total_file_size += file_size
+            # increase total_file_size
+            total_file_size += file_size
+        except:
+            pass
+        finally:
+            # increment count
+            count += 1
 
-        # increment count
-        count += 1
-
-        # check if we should summarise
-        if count % 10 == 0:
-            summarise(total_file_size, status_codes_frequency)
+            # check if we should summarise
+            if count % 10 == 0:
+                summarise(total_file_size, status_codes_frequency)
 
     # If we run out lines before a sigint or get a multiple of 10
     # We just summarise what we currently have
