@@ -14,4 +14,5 @@ class LockedClass:
         if key == "first_name":
             self.__dict__[key] = value
         else:
-            raise AttributeError(f"'LockedClass' object has no attribute '{key}'")
+            error_message = f"'LockedClass' object has no attribute {key}"
+            raise AttributeError(error_message)
