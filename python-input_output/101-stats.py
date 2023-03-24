@@ -21,7 +21,7 @@ def main():
         print("File size:", total_file_size)
 
         # Print status codes
-        keys = list(status_codes_frequency.keys)
+        keys = list(status_codes_frequency.keys())
         keys.sort()
         for status_code in keys:
             print(f'{status_code}: {status_codes_frequency[status_code]}')
