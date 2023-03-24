@@ -22,7 +22,7 @@ def main():
     status_codes_frequency = {}
     total_file_size = 0
     count = 0
- 
+
     # Summarise and reset on SIGINT signal
     def on_sig_int():
         nonlocal status_codes_frequency
