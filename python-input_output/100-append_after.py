@@ -1,7 +1,21 @@
 #!/usr/bin/python3
+"""
+Implements append_after
+"""
 
 
 def append_after(filename="", search_string="", new_string=""):
+    """
+    Appends a specified string after every search_string
+    in the specified filename
+
+    Args:
+        - filename (str)
+        - search_string (str)
+        - new_string (str)
+    Returns:
+        - None
+    """
     with open(filename, "rw") as f:
         lines = f.readlines()
         append_after = []
