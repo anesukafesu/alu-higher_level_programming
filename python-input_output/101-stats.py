@@ -40,6 +40,13 @@ def main():
             status_code = fields[-2]
             file_size = int(fields[-1])
 
+            # Checking if status code is not valid
+            if type(status_code) is not int:
+                raise Exception()
+
+            if status_code < 200 or status_code >= 600:
+                raise Exception()
+
             # Add status_code to our hash
             if status_code in status_codes_frequency:
                 status_codes_frequency[status_code] += 1
