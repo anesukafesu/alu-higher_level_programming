@@ -16,18 +16,19 @@ def append_after(filename="", search_string="", new_string=""):
     Returns:
         - None
     """
-    with open(filename, "w+") as f:
+    lines = []
+    with open(filename, "r") as f:
         lines = f.readlines()
         append_after = []
-        offset = 0
-
+        offset = 1
+        
         for i in range(len(lines)):
-            if  search_string in line[i]:
+            if  search_string in lines[i]:
                 append_after.append(i)
-
 
         for appendage_point in append_after:
             lines.insert(appendage_point + offset, new_string)
             offset += 1
 
+    with open(filename, "w") as f:
         f.writelines(lines)
