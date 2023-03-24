@@ -16,7 +16,7 @@ def append_after(filename="", search_string="", new_string=""):
     Returns:
         - None
     """
-    with open(filename, "rw") as f:
+    with open(filename, "w+") as f:
         lines = f.readlines()
         append_after = []
         offset = 0
