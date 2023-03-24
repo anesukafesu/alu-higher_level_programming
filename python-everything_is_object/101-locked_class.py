@@ -17,7 +17,7 @@ class LockedClass:
             error_message = f"'LockedClass' object has no attribute '{key}'"
             raise AttributeError(error_message)
 
-    def __getattr__(self, key):
+    def __getattribute__(self, key):
         if key == "first_name":
             return self.__dict__[key]
         else:
