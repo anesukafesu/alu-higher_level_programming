@@ -26,11 +26,6 @@ def main():
         for status_code in keys:
             print(f'{status_code}: {status_codes_frequency[status_code]}')
 
-        # Reset file size
-        total_file_size = 0
-        # Reset status codes
-        status_codes_frequency = {}
-
     # Summarise and reset on SIGINT signal
     signal.signal(signal.SIGINT, summarise_and_reset)
     
