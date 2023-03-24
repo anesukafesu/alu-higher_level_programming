@@ -32,4 +32,4 @@ TypeError: BaseGeometry.integer_validator() missing 1 required positional argume
 >>> bg.integer_validator('width', 0)
 Traceback (most recent call last):
 ...
-ValueError: height must be greater than 0
+ValueError: width must be greater than 0
