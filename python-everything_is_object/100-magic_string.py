@@ -1,4 +1,4 @@
 #!/usr/bin/python3
 def magic_string():
-    global i
+    nonlocal i
     return ("BestSchool, " * (i - 1)) + "BestSchool"
