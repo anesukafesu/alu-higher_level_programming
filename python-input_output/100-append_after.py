@@ -22,7 +22,7 @@ def append_after(filename="", search_string="", new_string=""):
         offset = 0
 
         for i in range(len(lines)):
-            if lines[i] == search_string:
+            if  search_string in line[i]:
                 append_after.append(i)
 
 
