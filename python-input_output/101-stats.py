@@ -34,7 +34,7 @@ def main():
         # parse line to extract info
         fields = line.strip().split()
         status_code = fields[-2]
-        file_size = fields[-1]
+        file_size = int(fields[-1])
 
         # Add status_code to our hash
         if status_code in status_codes_frequency:
