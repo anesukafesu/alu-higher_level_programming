@@ -14,6 +14,9 @@ def main():
     
     # Summarises the values and resets them
     def summarise_and_reset():
+        nonlocal status_codes_frequency
+        nonlocal total_file_size
+
         # Print the file size
         print("File size:", total_file_size)
 
