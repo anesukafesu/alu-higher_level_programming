@@ -22,7 +22,7 @@ def main():
 
         # Print status codes
         for status_code in status_codes_frequency:
-            print(f'{status_code} : {status_codes_frequency[status_code]}')
+            print(f'{status_code}: {status_codes_frequency[status_code]}')
 
         # Reset file size
         total_file_size = 0
