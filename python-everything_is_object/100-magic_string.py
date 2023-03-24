@@ -1,4 +1,4 @@
-#!/usr/bin/python3
 def magic_string():
-    nonlocal i
+    nonlocal count
+    count += 1
     return ("BestSchool, " * (i - 1)) + "BestSchool"
