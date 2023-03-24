@@ -43,7 +43,7 @@ def main():
         if status_code in status_codes_frequency:
             status_codes_frequency[status_code] += 1
         else:
-            status_codes_frequency[status_code] = 0
+            status_codes_frequency[status_code] = 1
 
         # increase total_file_size
         total_file_size += file_size
