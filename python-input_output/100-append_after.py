@@ -21,9 +21,9 @@ def append_after(filename="", search_string="", new_string=""):
         lines = f.readlines()
         append_after = []
         offset = 1
-        
+
         for i in range(len(lines)):
-            if  search_string in lines[i]:
+            if search_string in lines[i]:
                 append_after.append(i)
 
         for appendage_point in append_after:
