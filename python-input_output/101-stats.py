@@ -51,7 +51,10 @@ def main():
         # check if we should summarise
         if count % 10 == 0:
             summarise_and_reset()
-
+    
+    # If we run out lines before a sigint or get a multiple of 10
+    # We just summarise what we currently have
+    summarise_and_reset()
 
 if __name__ == "__main__":
     main()
