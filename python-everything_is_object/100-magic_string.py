@@ -1,4 +1,4 @@
 #!/usr/bin/python3
+count = 0
 def magic_string():
-    return ("BestSchool, " * ((magic_string.c := magic_string.c + 1) - 1)) + "BestSchool"
-magic_string.c = 0
+    return ("BestSchool, " * ((count := count + 1) - 1)) + "BestSchool"
