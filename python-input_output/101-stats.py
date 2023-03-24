@@ -37,7 +37,7 @@ def main():
         # parse line to extract info
         try:
             fields = line.strip().split()
-            status_code = fields[-2]
+            status_code = int(fields[-2])
             file_size = int(fields[-1])
 
             # Checking if status code is not valid
