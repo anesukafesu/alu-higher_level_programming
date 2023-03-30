@@ -2,4 +2,4 @@
 -- show only name and score
 -- rank by score(highest first, lowest last)
 
-SELECT name, score FROM second_table ORDER BY score:
+SELECT score, name FROM second_table ORDER BY score;
