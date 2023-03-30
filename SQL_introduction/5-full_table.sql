@@ -1,2 +1,2 @@
 -- describe first_table
-SHOW CREATE TABLE first_table IF EXISTS;
+SHOW CREATE TABLE first_table;
