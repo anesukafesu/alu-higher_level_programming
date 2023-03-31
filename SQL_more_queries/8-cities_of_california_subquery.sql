@@ -1,6 +1,7 @@
 -- looking for cities with state='California'
 SELECT cities.id, states.name
-FROM hbtn_0d_usa.states AS states
-INNER JOIN hbtn_0d_usa.cities AS cities
+FROM states
+INNER JOIN cities
+ON states.id = cities.state_id
 WHERE name = 'California'
 ORDER BY cities.id ASC;
