@@ -1,6 +1,6 @@
 -- counting the shows in each genre
 
-SELECT tv_genres.name as genre, COUNT(1) as number_of_shows
+SELECT tv_genres.name AS genre, COUNT(1) AS number_of_shows
 FROM tv_genres
 INNER JOIN tv_show_genres
 ON tv_genres.id = tv_show_genres.genre_id
