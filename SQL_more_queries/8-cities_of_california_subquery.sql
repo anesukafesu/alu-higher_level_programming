@@ -1,5 +1,5 @@
 -- looking for cities with state='California'
-SELECT cities.id, states.name
+SELECT cities.id, cities.name
 FROM states
 INNER JOIN cities
 ON states.id = cities.state_id
