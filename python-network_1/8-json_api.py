@@ -18,8 +18,8 @@ if __name__ == "__main__":
         print("No result")
     else:
         try:
-            print(response.content)
-            print(json_response)
-            print('[{}] {}'.format(json_response.get('id'), json_response.get('name')))
+            # JSON response
+            jr = response.json()
+            print('[{}] {}'.format(jr.get('id'), jr.get('name')))
         except:
             print("Not a valid JSON")
