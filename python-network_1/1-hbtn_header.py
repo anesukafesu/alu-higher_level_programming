@@ -5,5 +5,5 @@ import sys
 
 
 if __name__ == "__main__":
-    with urllib.request.open(sys.argv[1]) as response:
+    with urllib.request.urlopen(sys.argv[1]) as response:
         print(response.get_header('X-Request_Id'))
