@@ -1,7 +1,5 @@
 #!/usr/bin/python3
-"""
-Making an HTTP request using urllib
-"""
+"""Making an HTTP request using urllib"""
 import urllib.request
 
 
