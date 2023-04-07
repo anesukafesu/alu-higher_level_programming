@@ -14,14 +14,15 @@ if __name__ == "__main__":
 
     response = requests.post(url, data={'q': user})
     
-    print(response.content)
+    try:
+        # JSON response
+        json_response = response.json()
 
-    if len(response.content) == 0:
-        print("No result")
-    else:
         try:
-            # JSON response
-            jr = response.json()
-            print('[{}] {}'.format(jr.get('id'), jr.get('name')))
+            user_id = json_response['id']
+            user_name = json_response['name']
+            print('[{}] {}'.format(user_id, user_name))
         except:
-            print("Not a valid JSON")
+            print("")
+    except:
+        print("Not a valid JSON")
