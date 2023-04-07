@@ -12,4 +12,4 @@ if __name__ == "__main__":
     req = request.Request(url, data=data)
 
     with request.urlopen(req) as response:
-        print('Email:', response.read().decode("utf-8"))
+        print(response.read().decode("utf-8"))
