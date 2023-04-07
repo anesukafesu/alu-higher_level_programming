@@ -13,7 +13,7 @@ if __name__ == "__main__":
         user = ""
 
     response = requests.post(url, data={'q': user})
-    
+
     try:
         # JSON response
         json_response = response.json()
@@ -23,6 +23,6 @@ if __name__ == "__main__":
             user_name = json_response['name']
             print('[{}] {}'.format(user_id, user_name))
         except:
-            print("")
+            print("No result")
     except:
         print("Not a valid JSON")
