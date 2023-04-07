@@ -11,7 +11,7 @@ if __name__ == "__main__":
         user = sys.argv[1]
     else:
         user = ""
-    
+
     response = requests.post(url, data={'q': user})
 
     if len(response.content) == 0:
