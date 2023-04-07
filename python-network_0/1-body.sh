@@ -1,3 +1,3 @@
 #!/bin/bash
 # Printing request body if it is 200
-response=$(curl -sL -o /dev/null -w "%{http_code}" $1) && if [ $response -eq 200 ]; then echo $(curl -sL $1); fi
+response=$(curl -sL -o /dev/null -w "%{http_code}" $1) && if [ $response -eq 200 ]; then echo $(curl -sL $1 | tr -d ' '); fi
