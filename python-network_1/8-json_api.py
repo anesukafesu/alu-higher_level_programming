@@ -12,14 +12,13 @@ if __name__ == "__main__":
     else:
         user = ""
     
-    response = requests.get(url, params={'q': user})
+    response = requests.post(url, data={'q': user})
 
     if len(response.content) == 0:
         print("No result")
     else:
         try:
             print(response.content)
-            json_response = response.json()
             print(json_response)
             print('[{}] {}'.format(json_response.get('id'), json_response.get('name')))
         except:
