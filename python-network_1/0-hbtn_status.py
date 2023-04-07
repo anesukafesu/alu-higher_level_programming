@@ -1,5 +1,8 @@
 #!/usr/bin/python3
 import urllib.request
+"""
+Making an HTTP request using urllib
+"""
 
 
 with urllib.request.urlopen('https://alu-intranet.hbtn.io/status') as response:
