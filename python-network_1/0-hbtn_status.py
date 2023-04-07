@@ -3,4 +3,8 @@ import urllib.request
 
 
 with urllib.request.urlopen('https://alu-intranet.hbtn.io/status') as response:
-    print(response.read())
+    content = response.read()
+    print('Body response:')
+    print(f'\t- type: {type(content)}')
+    print(f'\t- content: {content}')
+    print(f'\t- utf8 content: {content.decode("utf-8")}')
