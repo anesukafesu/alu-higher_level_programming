@@ -13,6 +13,8 @@ if __name__ == "__main__":
         user = ""
 
     response = requests.post(url, data={'q': user})
+    
+    print(response.content)
 
     if len(response.content) == 0:
         print("No result")
