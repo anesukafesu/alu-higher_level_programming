@@ -1,6 +1,6 @@
 #!/usr/bin/python3
-import requests
 """making requests using requests"""
+import requests
 
 
 if __name__ == "__main__":
