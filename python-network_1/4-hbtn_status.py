@@ -8,5 +8,5 @@ if __name__ == "__main__":
     data = response.text
 
     print('Body response:')
-    print(f'\t- type: {type(data)}')
-    print(f'\t- type: {data}')
+    print('- type: {}'.format(type(data)))
+    print('- content: {}'.format(data))
