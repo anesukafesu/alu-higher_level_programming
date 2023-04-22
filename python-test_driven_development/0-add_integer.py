@@ -11,7 +11,7 @@ def add_integer(a, b=98):
     If they are floats, they are first converted
     The result is returned as an int
     """
- 
+
     # Checks if an argument is valid
     # Returns the argument converted to an int
     def ensure_is_valid(name, value):
