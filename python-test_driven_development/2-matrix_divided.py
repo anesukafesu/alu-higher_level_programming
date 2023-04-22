@@ -4,6 +4,7 @@ Implements the matrix_divided method
 Also includes a few helper methods
 """
 
+
 def ensure_is_a_matrix(matrix):
     try:
         # Check if matrix is a list
@@ -21,7 +22,7 @@ def ensure_is_a_matrix(matrix):
                     raise Exception()
 
     except:
-        s = 'matrix must be a matrix(list of lists) of integers/floats'
+        s = 'matrix must be a matrix (list of lists) of integers/floats'
         raise TypeError(s)
 
 
@@ -43,7 +44,7 @@ def ensure_div_is_valid_divisor(div):
 
 def matrix_deepcopy(matrix):
     new_matrix = []
-    
+
     for row in matrix:
         new_row = []
 
@@ -59,7 +60,7 @@ def matrix_divided(matrix, div):
     """
     Performs element-wise division of a matrix by div
     """
-    
+
     # Perform checks
     ensure_is_a_matrix(matrix)
     ensure_same_size_rows(matrix)
