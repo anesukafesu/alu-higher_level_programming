@@ -10,9 +10,7 @@ dolor sit amet
 lorem ipsum
 dolor :
 <BLANKLINE>
-<BLANKLINE>
 sit :
-<BLANKLINE>
 <BLANKLINE>
 amet
 >>> ti("""lorem ipsum
@@ -20,12 +18,9 @@ amet
 lorem ipsum
 dolor ,
 <BLANKLINE>
-<BLANKLINE>
 sit :
 <BLANKLINE>
-<BLANKLINE>
 ?
-<BLANKLINE>
 <BLANKLINE>
 amet
 >>> ti("")

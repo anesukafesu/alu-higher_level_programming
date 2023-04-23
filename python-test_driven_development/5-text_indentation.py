@@ -17,7 +17,7 @@ def text_indentation(text):
     special_chars = ':,?'
 
     for special_char in special_chars:
-        text = text.replace(special_char, f'{special_char}\n\n\n')
+        text = text.replace(special_char, f'{special_char}\n\n')
 
     lines = text.split('\n')
 
