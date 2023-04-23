@@ -1,0 +1,39 @@
+>>> ti = __import__('5-text_indentation').text_indentation
+>>> ti('lorem ipsum dolor sit amet')
+lorem ipsum dolor sit amet
+>>> ti("""lorem ipsum
+... dolor sit amet""")
+lorem ipsum
+dolor sit amet
+>>> ti("""lorem ipsum
+... dolor : sit : amet""")
+lorem ipsum
+dolor :
+<BLANKLINE>
+<BLANKLINE>
+sit :
+<BLANKLINE>
+<BLANKLINE>
+amet
+>>> ti("""lorem ipsum
+... dolor , sit :? amet""")
+lorem ipsum
+dolor ,
+<BLANKLINE>
+<BLANKLINE>
+sit :
+<BLANKLINE>
+<BLANKLINE>
+?
+<BLANKLINE>
+<BLANKLINE>
+amet
+>>> ti("")
+>>> ti(3) # doctest + ellipsis
+Traceback (most recent call last):
+...
+TypeError: text must be a string
+>>> ti() # doctest + ellipsis
+Traceback (most recent call last):
+...
+TypeError: text_indentation() missing 1 required positional argument: 'text'
