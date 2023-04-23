@@ -5,6 +5,9 @@ Implements the text_indentation method
 
 
 def text_indentation(text):
+    """
+    indent text? insert new lines in weird places
+    """
     if type(text) is not str:
         raise TypeError('text must be a string')
 
