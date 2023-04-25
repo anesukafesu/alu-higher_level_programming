@@ -68,4 +68,4 @@ class Rectangle(Base):
         """Prints a rectangle using pound signs(#)"""
         line = "#" * self.width + "\n"
         rect = line * self.height
-        print(rect)
+        print(rect.rstrip())
