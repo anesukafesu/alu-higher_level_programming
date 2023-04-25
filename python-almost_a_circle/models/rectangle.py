@@ -82,9 +82,9 @@ class Rectangle(Base):
         n_args = len(args)
 
         for i in range(n_args):
-            property_to_update = properties[i]
-            property_value = args[i]
-            self[property_to_update] = property_value
+            key = properties[i]
+            value = args[i]
+            setattr(self, key, value)
 
     def __str__(self):
         x, y, w, h = self.x, self.y, self.width, self.height
