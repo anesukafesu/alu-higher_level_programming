@@ -75,6 +75,9 @@ class Rectangle(Base):
         print(rect.rstrip())
 
     def update(self, *args):
+        """Updates properties passed in
+        Should be passed in the order id, width, height, x, y
+        """
         properties == ('id', 'width', 'height', 'x', 'y')
         n_args = len(args)
 
