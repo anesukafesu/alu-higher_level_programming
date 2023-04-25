@@ -69,7 +69,8 @@ class Rectangle(Base):
 
     def display(self):
         """Prints a rectangle using pound signs(#)"""
-        line = "#" * self.width + "\n"
+        print('\n' * self.y, end='')
+        line = " " * self.x + "#" * self.width + "\n"
         rect = line * self.height
         print(rect.rstrip())
 
