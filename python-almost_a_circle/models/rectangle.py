@@ -63,3 +63,9 @@ class Rectangle(Base):
     def area(self):
         """Returns the area of the rectangle"""
         return self.__width * self.__height
+
+    def display(self):
+        """Prints a rectangle using pound signs(#)"""
+        line = "#" * self.width + "\n"
+        rect = line * self.height
+        print(rect)
