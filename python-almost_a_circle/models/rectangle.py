@@ -74,6 +74,15 @@ class Rectangle(Base):
         rect = line * self.height
         print(rect.rstrip())
 
+    def update(self, *args):
+        properties == ('id', 'width', 'height', 'x', 'y')
+        n_args = len(args)
+
+        for i in range(n_args):
+            property_to_update = properties[i]
+            property_value = args[i]
+            self[property_to_update] = property_value
+
     def __str__(self):
         x, y, w, h = self.x, self.y, self.width, self.height
         return f'[Rectangle] ({self.id}) {x}/{y} - {w}/{h}'
