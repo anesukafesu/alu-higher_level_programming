@@ -11,10 +11,22 @@ class Rectangle(Base):
     """
     def __init__(self, width, height, x=0, y=0, id=None):
         super().__init__(id)
-        self.width = width
-        self.height = height
-        self.x = x
-        self.y = y
+        self.__width = width
+        self.__height = height
+        self.__x = x
+        self.__y = y
+
+    def __setattr__(self, key, value):
+        if type(value) is not int:
+            raise TypeError(f'{key} must be an integer')
+        
+        if value <= 0 and (key == 'width' or key == 'height'):
+            raise ValueError(f'{key} must be > 0')
+
+        if value < 0 and (key == 'x' or key == 'y'):
+            raise ValueError(f'{key} must be >= 0')
+
+        self.__dict__[key] = value
 
     @property
     def width(self):
