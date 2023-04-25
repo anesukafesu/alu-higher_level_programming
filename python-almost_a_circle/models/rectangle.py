@@ -19,7 +19,7 @@ class Rectangle(Base):
     def __setattr__(self, key, value):
         if type(value) is not int:
             raise TypeError(f'{key} must be an integer')
-        
+
         if value <= 0 and (key == 'width' or key == 'height'):
             raise ValueError(f'{key} must be > 0')
 
