@@ -26,7 +26,10 @@ class Rectangle(Base):
         if value < 0 and (key == 'x' or key == 'y'):
             raise ValueError(f'{key} must be >= 0')
 
-        self.__dict__['_Rectangle__' + key] = value
+        if key in ['x', 'y', 'width', 'height']:
+            self.__dict__['_Rectangle__' + key] = value
+        else:
+            self.__dict__[key] = value
 
     @property
     def width(self):
