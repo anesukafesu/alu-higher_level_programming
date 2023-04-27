@@ -33,12 +33,11 @@ class Square(Rectangle):
             if len(args) > 1:
                 # Duplicating the size value to become width and height
                 args = args[0:2] + args[1:]
-            super().update(args)
+            super().update(*args)
         else:
-            if size in kwargs:
+            if 'size' in kwargs:
                 # Converting size value to become width and height values
-                kwargs[width] = size
-                kwargs[height] = size
-                del kwargs[size]
+                kwargs['width'] = kwargs['height'] = kwargs['size']
+                del kwargs['size']
 
-            super().update(kwargs)
+            super().update(**kwargs)
