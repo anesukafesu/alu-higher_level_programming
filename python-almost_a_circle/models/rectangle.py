@@ -74,18 +74,22 @@ class Rectangle(Base):
         rect = line * self.height
         print(rect.rstrip())
 
-    def update(self, *args):
+    def update(self, *args, **kwargs):
         """Updates properties passed in
         Should be passed in the order id, width, height, x, y
         """
-        properties = ('id', 'width', 'height', 'x', 'y')
-        n_args = len(args)
+        if len(args) > 0:
+            for key, value in kwargs.items():
+                setattr(self, key, value)
+        else:
+            properties = ('id', 'width', 'height', 'x', 'y')
+            n_args = len(args)
 
-        for i in range(n_args):
-            key = properties[i]
-            value = args[i]
-            setattr(self, key, value)
+            for i in range(n_args):
+                key = properties[i]
+                value = args[i]
+                setattr(self, key, value)
 
     def __str__(self):
         x, y, w, h = self.x, self.y, self.width, self.height
-        return f'[Rectangle] ({self.id}) {x}/{y} - {w}/{h}'
+        return f'[Rectangle] ({self.d}) {x}/{y} - {w}/{h}'
