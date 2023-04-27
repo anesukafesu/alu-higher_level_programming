@@ -53,6 +53,6 @@ class Base:
 
     @classmethod
     def create(cls, **dictionary):
-        new_obj = cls(5, 5)
+        new_obj = cls(5) if cls.__name__ == 'Square' else cls(5, 4)
         new_obj.update(**dictionary)
         return new_obj
