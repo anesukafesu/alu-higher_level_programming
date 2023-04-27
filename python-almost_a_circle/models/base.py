@@ -56,3 +56,16 @@ class Base:
         new_obj = cls(5) if cls.__name__ == 'Square' else cls(5, 4)
         new_obj.update(**dictionary)
         return new_obj
+
+    @classmethod
+    def load_from_file(cls):
+        file_name = f'{cls.__name__}.json'
+        
+        try:
+            with open(file_name, 'r') as f:
+                json_data = f.read()
+                objs = cls.from_json_string(json_data)
+                return [create(cls, **obj) for obj in objs]
+        except:
+            # Runs if the file does not exist
+            return []
