@@ -60,12 +60,12 @@ class Base:
     @classmethod
     def load_from_file(cls):
         file_name = f'{cls.__name__}.json'
-        
+ 
         try:
             with open(file_name, 'r') as f:
                 json_data = f.read()
                 objs = cls.from_json_string(json_data)
-                return [create(cls, **obj) for obj in objs]
+                return list(map(lambda obj: cls.create(**obj), objs))
         except:
             # Runs if the file does not exist
             return []
