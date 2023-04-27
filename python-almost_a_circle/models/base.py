@@ -33,5 +33,6 @@ class Base:
         filename = f'{cls.__name__}.json'
 
         with open(filename, 'w') as f:
-            json_data = cls.to_json_string(list_objs)
+            dicts = map(lambda obj: obj.to_dictionary(), list_objs)
+            json_data = cls.to_json_string(dicts)
             f.write(json_data)
