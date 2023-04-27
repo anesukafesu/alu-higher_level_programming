@@ -26,7 +26,6 @@ class Base:
         if list_dictionaries is None:
             return "[]"
         else:
-            return dumps(map(lambda d: d.to_dictionary, list_dictionaries))
             return dumps(list_dictionaries)
 
     @classmethod
