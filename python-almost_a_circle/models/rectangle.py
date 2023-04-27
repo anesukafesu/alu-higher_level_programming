@@ -16,20 +16,15 @@ class Rectangle(Base):
         self.x = x
         self.y = y
 
-    def __setattr__(self, key, value):
+    def validate_attribute(self, key, value):
         if type(value) is not int:
             raise TypeError(f'{key} must be an integer')
 
-        if value <= 0 and (key == 'width' or key == 'height'):
-            raise ValueError(f'{key} must be > 0')
+        if value <= 0 and key in ['width', 'height']:
+            raise ValueError('{key} must be > 0')
 
-        if value < 0 and (key == 'x' or key == 'y'):
-            raise ValueError(f'{key} must be >= 0')
-
-        if key in ['x', 'y', 'width', 'height']:
-            self.__dict__['_Rectangle__' + key] = value
-        else:
-            self.__dict__[key] = value
+        if value < 0 and key in ['width', 'height']:
+            raise ValueError('{key} must be >= 0')
 
     @property
     def width(self):
@@ -37,6 +32,7 @@ class Rectangle(Base):
 
     @width.setter
     def width(self, value):
+        self.validate_attribute('width', value)
         self.__width = value
 
     @property
@@ -45,6 +41,7 @@ class Rectangle(Base):
 
     @height.setter
     def height(self, value):
+        self.validate_attribute('height', value)
         self.__height = value
 
     @property
@@ -53,6 +50,7 @@ class Rectangle(Base):
 
     @x.setter
     def x(self, value):
+        self.validate_attribute('x', value)
         self.__x = value
 
     @property
@@ -61,6 +59,7 @@ class Rectangle(Base):
 
     @y.setter
     def y(self, value):
+        self.validate_attribute('y', value)
         self.__y = value
 
     def area(self):
