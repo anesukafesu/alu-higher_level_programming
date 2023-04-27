@@ -34,7 +34,7 @@ class Base:
 
         with open(filename, 'w') as f:
             if list_objs is not None:
-                dicts = map(lambda obj: obj.to_dictionary(), list_objs)
+                dicts = list(map(lambda obj: obj.to_dictionary(), list_objs))
             else:
                 dicts = None
 
