@@ -27,7 +27,7 @@ class Rectangle(Base):
         if value <= 0 and key in ['width', 'height']:
             raise ValueError(f'{key} must be > 0')
 
-        if value < 0 and key in ['width', 'height']:
+        if value < 0 and key in ['x', 'y']:
             raise ValueError(f'{key} must be >= 0')
 
     @property
