@@ -93,6 +93,15 @@ class Rectangle(Base):
             for key, value in kwargs.items():
                 setattr(self, key, value)
 
+    def to_dictionary(self):
+        keys = ('id', 'width', 'height', 'x', 'y')
+        result = {}
+
+        for key in keys:
+            setattr(result, key, self[key])
+
+        return result
+
     def __str__(self):
         x, y, w, h = self.x, self.y, self.width, self.height
         return f'[Rectangle] ({self.d}) {x}/{y} - {w}/{h}'
