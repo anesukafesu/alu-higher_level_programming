@@ -26,6 +26,9 @@ class Square(Rectangle):
         self.height = value
 
     def to_dictionary(self):
+        """
+        Returns a dictionary object that represents this object
+        """
         result = super().to_dictionary()
         result['size'] = result['width']
         del result['width']
