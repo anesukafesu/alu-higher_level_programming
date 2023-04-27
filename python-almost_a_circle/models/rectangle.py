@@ -79,15 +79,15 @@ class Rectangle(Base):
         Should be passed in the order id, width, height, x, y
         """
         if len(args) > 0:
-            for key, value in kwargs.items():
-                setattr(self, key, value)
-        else:
             properties = ('id', 'width', 'height', 'x', 'y')
             n_args = len(args)
 
             for i in range(n_args):
                 key = properties[i]
                 value = args[i]
+                setattr(self, key, value)
+        else:
+            for key, value in kwargs.items():
                 setattr(self, key, value)
 
     def __str__(self):
