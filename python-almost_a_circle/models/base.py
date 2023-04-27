@@ -50,3 +50,9 @@ class Base:
             return []
         else:
             return loads(json_string)
+
+    @staticmethod
+    def create(cls, **dictionary):
+        new_obj = cls(0, 0)
+        new_obj.update(**dictionary)
+        return new_obj
