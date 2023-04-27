@@ -2,7 +2,7 @@
 """
 Implements the base model
 """
-from json import dumps
+from json import dumps, loads
 
 
 class Base:
@@ -40,3 +40,14 @@ class Base:
 
             json_data = cls.to_json_string(dicts)
             f.write(json_data)
+
+    @staticmethod
+    def from_json_string(json_string):
+        """
+        Reads data from json string
+        """
+        if json_string is None:
+            return []
+        else:
+            return loads(json_string)
+
