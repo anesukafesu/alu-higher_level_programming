@@ -25,6 +25,13 @@ class Square(Rectangle):
         self.width = value
         self.height = value
 
+    def to_dictionary(self):
+        result = super().to_dictionary()
+        result['size'] = result['width']
+        del result['width']
+        del result['height']
+        return result
+
     def update(self, *args, **kwargs):
         """
         Update square values
