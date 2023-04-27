@@ -2,6 +2,7 @@
 """
 Implements the base model
 """
+from json import dumps
 
 
 class Base:
@@ -16,3 +17,13 @@ class Base:
         else:
             self.__class__.__nb_objects += 1
             self.id = self.__class__.__nb_objects
+
+    @staticmethod
+    def to_json_string(list_dictionaries):
+        """
+        Converts a passed dictionary to json string
+        """
+        if list_dictionaries is None:
+            return "[]"
+        else:
+            return dumps(list_dictionaries)
