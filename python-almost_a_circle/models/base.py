@@ -53,6 +53,6 @@ class Base:
 
     @classmethod
     def create(cls, **dictionary):
-        new_obj = cls(0, 0)
+        new_obj = cls(5, 5)
         new_obj.update(**dictionary)
         return new_obj
