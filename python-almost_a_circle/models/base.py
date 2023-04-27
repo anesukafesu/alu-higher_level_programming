@@ -23,7 +23,6 @@ class Base:
         """
         Converts a passed dictionary to json string
         """
-        if list_dictionaries is None:
+        if list_dictionaries is None or list_dictionaries == []:
             return "[]"
-        else:
-            return dumps(list_dictionaries)
+        return dumps(list_dictionaries)
