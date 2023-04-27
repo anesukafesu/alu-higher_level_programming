@@ -17,6 +17,10 @@ class Rectangle(Base):
         self.y = y
 
     def validate_attribute(self, key, value):
+        """
+        This method validates the attributes of a rectangle
+        Raises Exceptions if they don't pass the validations
+        """
         if type(value) is not int:
             raise TypeError(f'{key} must be an integer')
 
