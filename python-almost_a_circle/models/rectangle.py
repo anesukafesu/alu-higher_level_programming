@@ -101,7 +101,8 @@ class Rectangle(Base):
         result = {}
 
         for key in keys:
-            setattr(result, key, self[key])
+            value = getattr(self, key)
+            result[key] = value
 
         return result
 
