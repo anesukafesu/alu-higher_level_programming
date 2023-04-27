@@ -25,10 +25,10 @@ class Rectangle(Base):
             raise TypeError(f'{key} must be an integer')
 
         if value <= 0 and key in ['width', 'height']:
-            raise ValueError('{key} must be > 0')
+            raise ValueError(f'{key} must be > 0')
 
         if value < 0 and key in ['width', 'height']:
-            raise ValueError('{key} must be >= 0')
+            raise ValueError(f'{key} must be >= 0')
 
     @property
     def width(self):
