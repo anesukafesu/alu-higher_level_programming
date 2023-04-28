@@ -9,7 +9,7 @@ class TestMaxInteger(unittest.TestCase):
 
     def test_simple_case(self):
         """5 positive integers, no-repetitions"""
-        self.assertEqual(mi([1, 2, 3, 4, 5]), 3)
+        self.assertEqual(mi([1, 2, 3, 4, 5]), 5)
 
     def test_negative_case(self):
         """5 negative integers, no-repetitions"""
