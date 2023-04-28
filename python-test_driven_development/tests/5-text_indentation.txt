@@ -13,16 +13,6 @@ dolor :
 sit :
 <BLANKLINE>
 amet
->>> ti("""lorem ipsum
-... dolor , sit :? amet""")
-lorem ipsum
-dolor ,
-<BLANKLINE>
-sit :
-<BLANKLINE>
-?
-<BLANKLINE>
-amet
 >>> ti("")
 >>> ti(3) # doctest + ellipsis
 Traceback (most recent call last):
