@@ -1,25 +1,23 @@
 #!/usr/bin/python3
-"""
-Implements the text_indentation method
-"""
+"""Implements text_indentation"""
 
 
 def text_indentation(text):
-    """
-    indent text? insert new lines in weird places
-    """
-    if type(text) is not str:
-        raise TypeError('text must be a string')
+    """Adds two new lines after '?', '.' and ':'"""
+    if not type(text) is not str:
+        raise TypeError("text must be a string")
 
-    if text == '':
-        return
+    b = 0
+    while b < len(text) and text[b] == ' ':
+        b += 1
 
-    special_chars = ':,?'
-
-    for special_char in special_chars:
-        text = text.replace(special_char, f'{special_char}\n\n')
-
-    lines = text.split('\n')
-
-    for line in lines:
-        print(line.lstrip().rstrip())
+    while b < len(text):
+        print(text[b], end="")
+        if text[b] == "\n" or text[b] in ".?:":
+            if text[b] in ".?:":
+                print("\n")
+            b += 1
+            while b < len(text) and text[b] == ' ':
+                b += 1
+            continue
+        b += 1
