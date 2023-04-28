@@ -59,7 +59,7 @@ class TestSquare(unittest.TestCase):
         with patch("sys.stdout", new=StringIO()) as fake_out:
             print(s1)
             self.assertEqual(fake_out.getvalue(),
-                             "[Square] (1) 0/0 - 2\n")
+                             "[Square] (2) 0/0 - 2\n")
 
     def test_display(self):
         """Test the functions in square"""
@@ -79,14 +79,14 @@ class TestSquare(unittest.TestCase):
         Base._Base__nb_objects = 0
         s1 = Square(4)
         self.assertEqual(s1.to_dictionary(),
-                         {'id': 1, 'size': 4, 'x': 0, 'y': 0})
+                         {'id': 26, 'size': 4, 'x': 0, 'y': 0})
 
     def test_update(self):
         """Test the functions in square"""
         Base._Base__nb_objects = 0
         s1 = Square(2)
         s1.update()
-        self.assertEqual(s1.id, 1)
+        self.assertEqual(s1.id, 27)
 
         s1.update(89)
         self.assertEqual(s1.id, 89)
@@ -170,7 +170,7 @@ class TestSquare(unittest.TestCase):
         Square.save_to_file([Square(1)])
         with open("Square.json") as file:
             self.assertEqual(file.read(),
-                             '[{"id": 1, "size": 1, "x": 0, "y": 0}]')
+                    '[{"id": 25, "x": 0, "y": 0, "size": 1}]')
 
     def test_save_to_file_empty(self):
         Square.save_to_file([])

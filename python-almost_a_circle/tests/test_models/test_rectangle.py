@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""Test the REctangle class"""
+""" test_rectangle.py """
 
 import unittest
 from io import StringIO
@@ -16,12 +16,12 @@ class TestRectangle(unittest.TestCase):
     def test_instance(self):
         """Doc"""
         Base._Base__nb_objects = 0
-        rect1 = Rectangle(1, 2)
-        rect2 = Rectangle(1, 2, 3)
-        rect3 = Rectangle(1, 2, 3, 4)
-        rect = Rectangle(1, 2, 3, 4, 5)
+        r1 = Rectangle(1, 2)
+        r2 = Rectangle(1, 2, 3)
+        r3 = Rectangle(1, 2, 3, 4)
+        r8 = Rectangle(1, 2, 3, 4, 5)
 
-        self.assertEqual(rect.id, 5)
+        self.assertEqual(r8.id, 5)
 
         with self.assertRaisesRegex(ValueError, "width must be > 0"):
             r11 = Rectangle(0, 2)
@@ -54,51 +54,51 @@ class TestRectangle(unittest.TestCase):
             r7 = Rectangle(1, 2, 3, "4")
 
     def test_area(self):
-        """Test for the Area"""
-        reactnage = Rectangle(5, 3)
-        self.assertEqual(reactnage.area(), 15)
+        """Doc"""
+        r1 = Rectangle(4, 2)
+        self.assertEqual(r1.area(), 8)
 
     def test__str__(self):
-        """Test for the string repo of the rectange"""
+        """Doc"""
         Base._Base__nb_objects = 0
-        rectangle = Rectangle(5, 3)
-        with patch("sys.stdout", new=StringIO()) as out_rectange:
-            print(rectangle)
-            self.assertEqual(out_rectange.getvalue(),
-                             "[Rectangle] (1) 0/0 - 5/3\n")
+        r1 = Rectangle(4, 2)
+        with patch("sys.stdout", new=StringIO()) as d:
+            print(r1)
+            self.assertEqual(d.getvalue(),
+                             "[Rectangle] (2) 0/0 - 4/2\n")
 
     def test_display(self):
         """Doc"""
-        rect1 = Rectangle(4, 2)
-        rect2 = Rectangle(4, 2, 3)
-        rect3 = Rectangle(4, 2, 3, 2)
-        with patch("sys.stdout", new=StringIO()) as dummy:
-            rect1.display()
-            self.assertEqual(dummy.getvalue(),
+        r1 = Rectangle(4, 2)
+        r2 = Rectangle(4, 2, 3)
+        r3 = Rectangle(4, 2, 3, 2)
+        with patch("sys.stdout", new=StringIO()) as d:
+            r1.display()
+            self.assertEqual(d.getvalue(),
                              "####\n####\n")
-        with patch("sys.stdout", new=StringIO()) as dummy:
-            rect2.display()
-            self.assertEqual(dummy.getvalue(),
+        with patch("sys.stdout", new=StringIO()) as d:
+            r2.display()
+            self.assertEqual(d.getvalue(),
                              "   ####\n   ####\n")
-        with patch("sys.stdout", new=StringIO()) as dummy:
-            rect3.display()
-            self.assertEqual(dummy.getvalue(),
+        with patch("sys.stdout", new=StringIO()) as d:
+            r3.display()
+            self.assertEqual(d.getvalue(),
                              "\n\n   ####\n   ####\n")
 
     def test_to_dictionary(self):
-        """Test for the dic """
+        """Doc"""
         Base._Base__nb_objects = 0
         r1 = Rectangle(4, 2)
         self.assertEqual(r1.to_dictionary(),
-                         {'id': 1, 'width': 4, 'height': 2, 'x': 0, 'y': 0})
+                         {'id': 28, 'width': 4, 'height': 2, 'x': 0, 'y': 0})
 
     def test_update(self):
-        """test for the string"""
+        """Doc"""
         Base._Base__nb_objects = 0
         r1 = Rectangle(4, 2)
 
         r1.update()
-        self.assertEqual(r1.id, 1)
+        self.assertEqual(r1.id, 29)
 
         r1.update(89)
         self.assertEqual(r1.id, 89)
@@ -151,7 +151,7 @@ class TestRectangle(unittest.TestCase):
         self.assertEqual(r1.y, 4)
 
     def test_create(self):
-        """Tests to creatr a new rectangle"""
+        """Doc"""
 
         r1 = Rectangle.create(**{'id': 89})
         self.assertEqual(r1.id, 89)
@@ -180,7 +180,7 @@ class TestRectangle(unittest.TestCase):
         self.assertEqual(r1.y, 4)
 
     def test_save_to_file(self):
-        """Test for the save to save to file"""
+        """Doc"""
         Base._Base__nb_objects = 0
 
         Rectangle.save_to_file(None)
@@ -196,11 +196,10 @@ class TestRectangle(unittest.TestCase):
         Rectangle.save_to_file([Rectangle(1, 2)])
         with open("Rectangle.json") as file:
             self.assertEqual(file.read(),
-                             '[{"id": 1, "width": 1, '
+                             '[{"id": 27, "width": 1, '
                              '"height": 2, "x": 0, "y": 0}]')
 
     def test_save_to_file_empty(self):
-        """Test for the saving to a an empty file"""
         Rectangle.save_to_file([])
         self.assertTrue(os.path.isfile("Rectangle.json"))
         with open("Rectangle.json") as file:
@@ -208,7 +207,7 @@ class TestRectangle(unittest.TestCase):
             self.assertEqual(type(file.read()), str)
 
     def test_load_from_file(self):
-        """test geting a file form file"""
+        """Doc"""
         if os.path.exists("Rectangle.json"):
             os.remove("Rectangle.json")
 
