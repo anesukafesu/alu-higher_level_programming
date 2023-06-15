@@ -8,7 +8,7 @@ if (nums.length === 0 || nums.length === 1) {
   let biggestNum = Math.max(nums[0], nums[1]);
   let secondBiggestNum = Math.min(nums[0], nums[1]);
 
-  for (const i = 2; i < nums.length; i++) {
+  for (let i = 2; i < nums.length; i++) {
     if (nums[i] > biggestNum) {
       // Bigger than the biggest number so far
       // Which means it's bigger than the second biggest as well

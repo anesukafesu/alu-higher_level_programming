@@ -3,11 +3,11 @@
 const x = process.argv[2];
 
 if (isNaN(x)) {
-  console.log("Missing number of occurrences");
+  console.log('Missing number of occurrences');
 } else {
-  n = Number(x);
+  const n = Number(x);
 
   for (let i = 0; i < n; i++) {
-    console.log("C is fun");
+    console.log('C is fun');
   }
 }

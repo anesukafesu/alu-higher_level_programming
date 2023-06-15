@@ -7,9 +7,9 @@ if (isNaN(firstArg)) {
 } else {
   const n = Number(firstArg);
 
-  const line = '';
+  let line = '';
 
-  for (const i = 0; i < n; i++) line += 'X';
+  for (let i = 0; i < n; i++) line += 'X';
 
-  for (const i = 0; i < n; i++) console.log(line);
+  for (let i = 0; i < n; i++) console.log(line);
 }
