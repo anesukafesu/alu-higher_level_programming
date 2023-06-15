@@ -1,6 +1,6 @@
 #!/usr/bin/node
 
-const nums = process.argv.slice(2);
+const nums = process.argv.slice(2).map(n => Number(n));
 
 if (nums.length === 0 || nums.length === 1) {
   console.log(0);
