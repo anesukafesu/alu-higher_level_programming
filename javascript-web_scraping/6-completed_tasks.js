@@ -10,7 +10,7 @@ request(url, function (err, res, body) {
     let usersWithCompletedTodos = {};
 
     for (const todo of todos) {
-      if (todo.complete) {
+      if (todo.completed) {
         if (usersWithCompletedTodos[todo.userId]) {
           usersWithCompletedTodos[todo.userId] ++;
         } else {
