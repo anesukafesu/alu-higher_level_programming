@@ -13,6 +13,7 @@ request(url, function (err, res, body) {
 
     for (const film of films) {
       if (film.characters.includes(characterId)) count++;
+      console.log(film.characters)
     }
 
     console.log(count);
