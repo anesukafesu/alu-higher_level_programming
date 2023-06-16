@@ -2,7 +2,7 @@
 
 function converter (base) {
   return function (number) {
-    return Number(number.toString(base));
+    return number.toString(base);
   };
 }
 
