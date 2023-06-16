@@ -1,8 +1,8 @@
 $.ajax({
-    url: 'https://fourtonfish.com/hellosalut/?lang=fr',
-    type: 'GET',
-    dataType: 'json',
-    success: (data) => {
-        $('div#hello').text(data);
-    }
+  url: 'https://fourtonfish.com/hellosalut/?lang=fr',
+  type: 'GET',
+  dataType: 'json',
+  success: (data) => {
+    $('div#hello').text(data);
+  },
 });
