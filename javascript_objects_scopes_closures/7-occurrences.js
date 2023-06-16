@@ -3,7 +3,7 @@
 function nbOccurences (list, searchElement) {
   let numberOfTimes = 0;
 
-  for (let element of list) {
+  for (const element of list) {
     if (element === searchElement) {
       numberOfTimes += 1;
     }
