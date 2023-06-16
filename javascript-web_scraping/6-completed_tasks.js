@@ -7,12 +7,12 @@ request(url, function (err, res, body) {
   if (err) console.log(err);
   else {
     const todos = JSON.parse(body);
-    let usersWithCompletedTodos = {};
+    const usersWithCompletedTodos = {};
 
     for (const todo of todos) {
       if (todo.completed) {
         if (usersWithCompletedTodos[todo.userId]) {
-          usersWithCompletedTodos[todo.userId] ++;
+          usersWithCompletedTodos[todo.userId]++;
         } else {
           usersWithCompletedTodos[todo.userId] = 1;
         }
