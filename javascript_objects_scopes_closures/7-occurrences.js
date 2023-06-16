@@ -1,6 +1,6 @@
 #!/usr/bin/node
 
-function nbOccurrences (list, searchElement) {
+function nbOccurences (list, searchElement) {
   let numberOfTimes = 0;
 
   for (let element of list) {
@@ -12,4 +12,4 @@ function nbOccurrences (list, searchElement) {
   return numberOfTimes;
 }
 
-module.exports = { nbOccurrences };
+module.exports = { nbOccurences };
