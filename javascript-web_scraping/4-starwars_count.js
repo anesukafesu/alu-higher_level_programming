@@ -12,7 +12,7 @@ request(url, function (err, res, body) {
     let count = 0;
 
     for (const film of films) {
-      for (const character in film.characters) {
+      for (const character of film.characters) {
         // Getting the id from the character url as a string
         const characterId = String(character.split('/').slice(-2, -1)[0]);
         if (targetId === characterId) count++;
