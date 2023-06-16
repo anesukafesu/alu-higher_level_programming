@@ -2,7 +2,8 @@
 let count = 0;
 
 function logMe (item) {
-    console.log(count + ': ' + item);
+  console.log(count + ': ' + item);
+  count += 1;
 }
 
-module.exports = { logMe }
+module.exports = { logMe };
