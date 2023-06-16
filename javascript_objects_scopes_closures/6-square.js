@@ -1,8 +1,8 @@
 #!/usr/bin/node
-const Square = require('./4-square');
+const SquareParent = require('./5-square');
 
-class Square extends Rectangle {
-  charPrint(c = 'X') {
+class Square extends SquareParent {
+  charPrint (c = 'X') {
     let line = '';
 
     for (let i = 0; i < this.width; i++) {
