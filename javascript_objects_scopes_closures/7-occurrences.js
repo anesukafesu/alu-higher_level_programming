@@ -1,6 +1,6 @@
 #!/usr/bin/node
 
-function nbOccurrences(list, searchElement) {
+function nbOccurrences (list, searchElement) {
   let numberOfTimes = 0;
 
   for (let element of list) {
